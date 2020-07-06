@@ -1,5 +1,8 @@
-// 1. Используйте пробелы вместо табуляции
+#JavaScript Best Practice Guide
 
+## 1. Используйте пробелы вместо табуляции
+
+``` js
 // Плохо
 function foo() {
 ∙∙∙∙let name;
@@ -9,9 +12,11 @@ function foo() {
 function baz() {
 ∙∙let name;
 }
+```
 
-// 2. Точки с запятыми необходимы
+## 2. Точки с запятыми необходимы
 
+``` js
 // Плохо
 let luke = {}
 let leia = {}
@@ -23,17 +28,21 @@ let leia = {};
 [luke, leia].forEach((jedi) => {
 jedi.father = ‘vader’;
 });
+```
 
-// 3. Больше не используйте var
+## 3. Больше не используйте var
 
+``` js
 // Плохо
 var example = 42;
 
 // Хорошо
 let example = 42;
+```
 
-//4. Стрелочные функции предпочтительнее
+##4. Стрелочные функции предпочтительнее
 
+``` js
 // Плохо
 [1, 2, 3].map(function (x) {
 const y = x + 1;
@@ -45,9 +54,11 @@ return x * y;
 const y = x + 1;
 return x * y;
 });
+```
 
-//5. Используйте шаблонные строки вместо объединения
+##5. Используйте шаблонные строки вместо объединения
 
+``` js
 // Плохо
 function sayHi(name) {
 return ‘How are you, ‘ + name + ‘?’;
@@ -62,9 +73,11 @@ return [‘How are you, ‘, name, ‘?’].join();
 function sayHi(name) {
 return `How are you, ${name}?`;
 }
+```
 
-//6. Не используйте eval()
+##6. Не используйте eval()
 
+``` js
 // Плохо
 let obj = { a: 20, b: 30 };
 let propName = getPropName(); // returns “a” or “b”
@@ -74,9 +87,11 @@ eval( ‘var result = obj.’ + propName );
 let obj = { a: 20, b: 30 };
 let propName = getPropName(); // returns “a” or “b”
 let result = obj[ propName ]; // obj[ “a” ] is the same as obj.a
+```
 
-//7. По переменной на объявление
-     
+##7. По переменной на объявление
+
+``` js
 // Плохо
 let a = 1, b = 2, c = 3;
 
@@ -84,9 +99,11 @@ let a = 1, b = 2, c = 3;
 let a = 1;
 let b = 2;
 let c = 3;
+```
 
-//8. Не используйте нижнее подчеркивание в начале или конце названий.
+##8. Не используйте нижнее подчеркивание в начале или конце названий.
 
+``` js
 //Плохо
 let name_ = 'Max';
 foo._bar();
@@ -94,9 +111,11 @@ foo._bar();
 //Хорошо
 let name = 'Max';
 foo.bar();
+```
 
-//9. Не нужно неинициализированной переменной задавать значение undefined, это значение присваивается автоматически.
+##9. Не задавайте значение undefined, это значение присваивается автоматически.
 
+``` js
 //Плохо
 let foo = undefined;
 let bar = undefined;
@@ -104,9 +123,11 @@ let bar = undefined;
 //Хорошо
 let foo;
 let bar;
+```
 
-//10. При использовании конструкции if .. else располагайте else на одной строке со скобкой закрывающей блок if.
+##10. При использовании конструкции if .. else располагайте else на одной строке со скобкой закрывающей блок if.
 
+``` js
 //Плохо
 if (test) {
   thing1();
@@ -123,3 +144,4 @@ if (test) {
 } else {
   thing3();
 }
+```
