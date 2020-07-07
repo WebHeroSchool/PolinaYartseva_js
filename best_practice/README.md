@@ -1,4 +1,4 @@
-#JavaScript Best Practice Guide
+# JavaScript Best Practice Guide
 
 ## 1. Используйте пробелы вместо табуляции
 
