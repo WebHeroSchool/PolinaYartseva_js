@@ -4,7 +4,7 @@ let getUsername = (url) => {
     let urlArray = url.split('=');
     let userName = urlArray[1];
     if(isNaN(userName)){
-        userName = 'PolinaYartseva';
+        userName = '6thSense';
     }
     return userName;
 }
@@ -37,7 +37,7 @@ let promise = fetch('https://api.github.com/users/' + name)
                 let elementLink = document.createElement('a');
                 let elementTitle = document.createElement('h2');
                 elementTitle.innerText = name;
-                elementLink.innerHTML = profile;
+                elementLink.href = profile;
                 document.body.appendChild(elementLink);
                 elementLink.appendChild(elementTitle);
             };
