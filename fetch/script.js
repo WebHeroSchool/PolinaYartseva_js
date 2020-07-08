@@ -4,7 +4,7 @@ let getUsername = (url) => {
     let urlArray = url.split('=');
     let userName = urlArray[1];
     if(isNaN(userName)){
-        userName = 'PolinaYartseva';
+        userName = '6thSense';
     }
     return userName;
 }
